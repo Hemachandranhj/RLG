@@ -1,0 +1,5 @@
+E:\Application\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\bin\Debug\ChildInsurance.Engine.FinancialRecommendation.dll
+E:\Application\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\bin\Debug\ChildInsurance.Engine.FinancialRecommendation.pdb
+E:\Application\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\obj\Debug\ChildInsurance.Engine.FinancialRecommendation.csprojResolveAssemblyReference.cache
+E:\Application\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\obj\Debug\ChildInsurance.Engine.FinancialRecommendation.dll
+E:\Application\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\obj\Debug\ChildInsurance.Engine.FinancialRecommendation.pdb

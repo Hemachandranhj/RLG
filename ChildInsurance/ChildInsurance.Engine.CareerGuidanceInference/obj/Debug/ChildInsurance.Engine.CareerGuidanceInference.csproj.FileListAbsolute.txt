@@ -1,0 +1,4 @@
+E:\Application\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\bin\Debug\ChildInsurance.Engine.CareerGuidanceInference.dll
+E:\Application\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\bin\Debug\ChildInsurance.Engine.CareerGuidanceInference.pdb
+E:\Application\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\obj\Debug\ChildInsurance.Engine.CareerGuidanceInference.dll
+E:\Application\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\obj\Debug\ChildInsurance.Engine.CareerGuidanceInference.pdb

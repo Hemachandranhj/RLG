@@ -1,0 +1,4 @@
+E:\Application\ChildInsurance\ChildInsurance.Data\bin\Debug\ChildInsurance.Data.dll
+E:\Application\ChildInsurance\ChildInsurance.Data\bin\Debug\ChildInsurance.Data.pdb
+E:\Application\ChildInsurance\ChildInsurance.Data\obj\Debug\ChildInsurance.Data.dll
+E:\Application\ChildInsurance\ChildInsurance.Data\obj\Debug\ChildInsurance.Data.pdb
