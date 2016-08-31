@@ -18,7 +18,7 @@ namespace ChildInsurance.Web.Controllers
 
         private CareerOptionViewModel viewModel = new CareerOptionViewModel();
 
-        public ActionResult CareerOption()
+        public ActionResult Index()
         {
             ProcessAcademicCareerOption();
 

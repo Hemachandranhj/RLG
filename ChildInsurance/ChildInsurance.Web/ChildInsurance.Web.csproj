@@ -228,7 +228,7 @@
     <None Include="Service References\CareerOptionService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\CareerOption\CareerOption.cshtml" />
+    <Content Include="Views\CareerOption\Index.cshtml" />
     <Content Include="Views\FactFind\FactFind.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
