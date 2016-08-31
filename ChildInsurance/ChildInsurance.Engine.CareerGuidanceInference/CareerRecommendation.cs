@@ -23,7 +23,6 @@ namespace Carreer
     {
         public string GetNonAcademyCareerOption(InterestRequest interestRequest)
         {
-            WriteCsvFile(interestRequest);
             // Step 1 shuffle the data
             Shuffle(InterestConstants.BaseFile, InterestConstants.ShuffledBaseFile);
             // Step 2 Segregate data for evaluation
@@ -38,36 +37,6 @@ namespace Carreer
             return Evaluate(InterestConstants.TrainedNetworkFile, InterestConstants.AnalystFile, InterestConstants.NormalizedEvaluateFile);
         }
 
-        private void WriteCsvFile(InterestRequest interestRequest)
-        {
-            var csvContent = new StringBuilder();
-
-            var header = string.Empty;
-
-            for (int i = 1; i <= interestRequest.InterestName.Count; i++)
-            {
-                //Add the Header row for CSV file.
-                header += "Interest" + i;
-
-                if (i != interestRequest.InterestName.Count)
-                {
-                    header += ",";
-                }
-            }
-
-            csvContent.AppendLine(header);
-
-            var content = string.Empty;
-
-            interestRequest.InterestName.ToList().ForEach(e =>
-            {
-                content += e + ",";
-            });
-
-            csvContent.AppendLine(content);
-
-            File.AppendAllText(@"C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\App_Data", csvContent.ToString());
-        }
 
         public string GetAcademicOptions()
         {

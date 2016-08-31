@@ -151,7 +151,6 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="App_Data\InterestData.csv" />
     <Content Include="App_Data\InterestData_Eval.csv" />
     <Content Include="bundles\fonts\lemon.otf" />
     <Content Include="bundles\fonts\roboto\Roboto-Bold.eot" />
