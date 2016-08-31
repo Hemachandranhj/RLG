@@ -11,6 +11,8 @@ namespace ChildInsurance.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            var obj = new CareerOptionService.CareerOptionServiceClient();
+            ViewData["ServiceData"] = obj.GetData(1);
             return View();
         }
     }
