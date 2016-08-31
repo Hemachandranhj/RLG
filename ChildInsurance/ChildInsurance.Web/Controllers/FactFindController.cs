@@ -12,6 +12,8 @@ namespace ChildInsurance.Web.Views
         [HttpGet]
         public ActionResult Index(string type)
         {
+            SaveCareerType(type);
+
             FactFindViewModel model = new FactFindViewModel();
 
             ////id = (id == null) ? Guid.NewGuid() : id;
@@ -40,6 +42,21 @@ namespace ChildInsurance.Web.Views
             ////model.StudentId = id;
 
             return View(model);
+        }
+
+        private void SaveCareerType(string type)
+        {
+            string file = Server.MapPath(@"~\App_Data\CareerType.xml");
+            using (XmlWriter writer = XmlWriter.Create(file))
+            {
+                writer.WriteStartDocument();
+
+                writer.WriteStartElement("Career");
+                writer.WriteElementString("Type", type);
+                writer.WriteEndElement();
+
+                writer.WriteEndDocument();
+            }
         }
 
         [HttpPost]
