@@ -8,7 +8,6 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>index3</title>
     <link type="text/css" rel="stylesheet" href="../../bundles/css/materialize.min.css" />
     <link type="text/css" rel="stylesheet" href="../../bundles/css/custom.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -115,7 +114,7 @@
                 <div class="row">
                     <div class="col s6 l6 m6 skew-blue cards">
                         <span class="cards9"></span>
-                        <p>Career Recommedation</p>
+                        <a href="@Url.Action("Index", "CareerOption")"><p>Career Recommedation</p></a>
                     </div>
                     <div class="col s6 l6 m6 dark-blue cards">
                         <span class="cards8"></span>
@@ -210,7 +209,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    @Html.HiddenFor(m => m.StudentId);
+                                    @Html.HiddenFor(m => m.StudentId)
                                     <div class="input-field col l4 offset-l7">
                                         <input id="first_name" value="Recommeded plan" type="submit" class="validate waves-effect waves-light btn factfindbtn">
                                     </div>
