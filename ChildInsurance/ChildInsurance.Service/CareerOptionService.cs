@@ -17,7 +17,7 @@ namespace ChildInsurance.Service
             return career;
         }
 
-        public string GetAcademicOptions()
+        public string GetAcademicCareerOptions()
         {
             var careerEngine = new Carreer.CareerRecommendation();
             var career = careerEngine.GetAcademicOptions();

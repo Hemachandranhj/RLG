@@ -20,27 +20,62 @@ namespace ChildInsurance.Web.Controllers
 
         public ActionResult CareerOption()
         {
-            viewModel.NonAcademicCareerRecommedation = new List<CareerRecommedation>();
+            ProcessAcademicCareerOption();
 
             ProcessNonAcademicCareerOption();
 
             return View(viewModel);
         }
 
-        private void ProcessNonAcademicCareerOption()
+        private void ProcessAcademicCareerOption()
         {
-            var interests = GetNonAcademicInterests();
+            viewModel.AcademicCareerRecommedation = new List<CareerRecommedation>();
+
+            string filePath = Server.MapPath(@"~\App_Data\AcademicInterest.xml");
+            var interests = GetInterests(filePath);
 
             var request = new InterestRequest
             {
                 InterestName = interests
             };
 
-            WriteCsvFile(request);
+            WriteCsvFile(request, "Chartered Accountant", "AcademicData_Eval");
+
+            var careerOption = serviceClient.GetAcademicCareerOptions();
+
+            PopulateAcademicCareerOptionViewModel(interests, careerOption);
+        }
+
+        private void ProcessNonAcademicCareerOption()
+        {
+            viewModel.NonAcademicCareerRecommedation = new List<CareerRecommedation>();
+
+            string filePath = Server.MapPath(@"~\App_Data\NonAcademicInterest.xml");
+            var interests = GetInterests(filePath);
+
+            var request = new InterestRequest
+            {
+                InterestName = interests
+            };
+
+            WriteCsvFile(request, "VFX Designer", "InterestData_Eval");
 
             var careerOption = serviceClient.GetNonAcademyCareerOption();
 
             PopulateNonAcademicCareerOptionViewModel(interests, careerOption);
+        }
+
+        private void PopulateAcademicCareerOptionViewModel(List<string> interests, string careerOption)
+        {
+            viewModel.AcademicCareerRecommedation = new List<CareerRecommedation>();
+
+            var interestModel = ConvertRequestToModel(interests);
+
+            var careerRecommedation = new CareerRecommedation();
+            careerRecommedation.Interests = interestModel;
+            careerRecommedation.CareerOption = careerOption;
+
+            viewModel.AcademicCareerRecommedation.Add(careerRecommedation);
         }
 
         private void PopulateNonAcademicCareerOptionViewModel(List<string> interests, string careerOption)
@@ -71,7 +106,7 @@ namespace ChildInsurance.Web.Controllers
             return interestModel;
         }
 
-        private void WriteCsvFile(InterestRequest interestRequest)
+        private void WriteCsvFile(InterestRequest interestRequest, string tempCareerOption, string fileName)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -89,22 +124,21 @@ namespace ChildInsurance.Web.Controllers
 
             interestRequest.InterestName.ToList().ForEach(e =>
             {
-                csvContent += e + ",";
+                csvContent += e.Trim() + ",";
             });
 
-            csvContent += "VFX Designer";
+            csvContent += tempCareerOption;
             sb.AppendLine(csvContent);
 
-            string file = Server.MapPath(@"~\App_Data\InterestData_Eval.csv");
+            string file = Server.MapPath(@"~\App_Data\" + fileName + ".csv");
             System.IO.File.WriteAllText(file, sb.ToString());
         }
 
-        private List<string> GetNonAcademicInterests()
+        private List<string> GetInterests(string file)
         {
             var interests = new List<string>();
-
-            string filePath = Server.MapPath(@"~\App_Data\Interests.xml");
-            XDocument interestXml = XDocument.Load(filePath);
+            
+            XDocument interestXml = XDocument.Load(file);
             var interestElements = interestXml.Elements().Elements("InterestName");
 
             interestElements.ToList().ForEach(e =>

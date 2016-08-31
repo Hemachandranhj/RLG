@@ -21,11 +21,11 @@ namespace ChildInsurance.Web.CareerOptionService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption", ReplyAction="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOptionResponse")]
         System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetAcademicOptions", ReplyAction="http://tempuri.org/ICareerOptionService/GetAcademicOptionsResponse")]
-        string GetAcademicOptions();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetAcademicCareerOptions", ReplyAction="http://tempuri.org/ICareerOptionService/GetAcademicCareerOptionsResponse")]
+        string GetAcademicCareerOptions();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetAcademicOptions", ReplyAction="http://tempuri.org/ICareerOptionService/GetAcademicOptionsResponse")]
-        System.Threading.Tasks.Task<string> GetAcademicOptionsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetAcademicCareerOptions", ReplyAction="http://tempuri.org/ICareerOptionService/GetAcademicCareerOptionsResponse")]
+        System.Threading.Tasks.Task<string> GetAcademicCareerOptionsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,12 +63,12 @@ namespace ChildInsurance.Web.CareerOptionService {
             return base.Channel.GetNonAcademyCareerOptionAsync();
         }
         
-        public string GetAcademicOptions() {
-            return base.Channel.GetAcademicOptions();
+        public string GetAcademicCareerOptions() {
+            return base.Channel.GetAcademicCareerOptions();
         }
         
-        public System.Threading.Tasks.Task<string> GetAcademicOptionsAsync() {
-            return base.Channel.GetAcademicOptionsAsync();
+        public System.Threading.Tasks.Task<string> GetAcademicCareerOptionsAsync() {
+            return base.Channel.GetAcademicCareerOptionsAsync();
         }
     }
 }

@@ -12,15 +12,15 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAcademicOptions">
+  <xs:element name="GetAcademicCareerOptions">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAcademicOptionsResponse">
+  <xs:element name="GetAcademicCareerOptionsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetAcademicOptionsResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GetAcademicCareerOptionsResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

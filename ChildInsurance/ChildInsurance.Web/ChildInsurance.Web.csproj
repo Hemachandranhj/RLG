@@ -120,7 +120,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Interests.xml" />
+    <Content Include="App_Data\AcademicInterest.xml" />
+    <Content Include="App_Data\NonAcademicInterest.xml" />
     <Content Include="bundles\css\custom.css" />
     <Content Include="bundles\css\materialize.css" />
     <Content Include="bundles\css\materialize.min.css" />

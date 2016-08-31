@@ -12,20 +12,20 @@
   <wsdl:message name="ICareerOptionService_GetNonAcademyCareerOption_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetNonAcademyCareerOptionResponse" />
   </wsdl:message>
-  <wsdl:message name="ICareerOptionService_GetAcademicOptions_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAcademicOptions" />
+  <wsdl:message name="ICareerOptionService_GetAcademicCareerOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcademicCareerOptions" />
   </wsdl:message>
-  <wsdl:message name="ICareerOptionService_GetAcademicOptions_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAcademicOptionsResponse" />
+  <wsdl:message name="ICareerOptionService_GetAcademicCareerOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcademicCareerOptionsResponse" />
   </wsdl:message>
   <wsdl:portType name="ICareerOptionService">
     <wsdl:operation name="GetNonAcademyCareerOption">
       <wsdl:input wsaw:Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption" message="tns:ICareerOptionService_GetNonAcademyCareerOption_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOptionResponse" message="tns:ICareerOptionService_GetNonAcademyCareerOption_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetAcademicOptions">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICareerOptionService/GetAcademicOptions" message="tns:ICareerOptionService_GetAcademicOptions_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICareerOptionService/GetAcademicOptionsResponse" message="tns:ICareerOptionService_GetAcademicOptions_OutputMessage" />
+    <wsdl:operation name="GetAcademicCareerOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICareerOptionService/GetAcademicCareerOptions" message="tns:ICareerOptionService_GetAcademicCareerOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICareerOptionService/GetAcademicCareerOptionsResponse" message="tns:ICareerOptionService_GetAcademicCareerOptions_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICareerOptionService" type="tns:ICareerOptionService">
@@ -39,8 +39,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetAcademicOptions">
-      <soap:operation soapAction="http://tempuri.org/ICareerOptionService/GetAcademicOptions" style="document" />
+    <wsdl:operation name="GetAcademicCareerOptions">
+      <soap:operation soapAction="http://tempuri.org/ICareerOptionService/GetAcademicCareerOptions" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
