@@ -94,6 +94,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -119,6 +120,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Interests.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -132,12 +134,12 @@
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
-    <Content Include="Service References\CareerOptionService\ChildInsurance.Web.CareerOptionService.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Service References\CareerOptionService\item.disco" />
     <None Include="Service References\CareerOptionService\configuration91.svcinfo" />
     <None Include="Service References\CareerOptionService\configuration.svcinfo" />
+    <None Include="Service References\CareerOptionService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CareerOptionService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -146,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CareerOptionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -180,6 +183,7 @@
     <None Include="Service References\CareerOptionService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\CareerOption\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -188,7 +192,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +202,10 @@
     <ProjectReference Include="..\ChildInsurance.Engine.FinancialRecommendation\ChildInsurance.Engine.FinancialRecommendation.csproj">
       <Project>{3a57538a-9c9d-4855-9f2e-1ed11e7adeb4}</Project>
       <Name>ChildInsurance.Engine.FinancialRecommendation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChildInsurance.Model\ChildInsurance.Model.csproj">
+      <Project>{1801d01b-d5ff-4e5c-a2cc-1c9bef825a2f}</Project>
+      <Name>ChildInsurance.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

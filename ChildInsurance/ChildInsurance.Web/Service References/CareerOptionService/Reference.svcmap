@@ -23,10 +23,11 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="c5a4c153-63bb-4384-a025-7ef98e6f79b8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChildInsurance.Service/CareerOptionService/?xsd=xsd1" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="bc362d07-e23e-4506-b466-43b66e9e3975" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChildInsurance.Service/CareerOptionService/?xsd=xsd3" />
     <MetadataFile FileName="CareerOptionService.wsdl" MetadataType="Wsdl" ID="dd233347-3cf0-4ee0-89d7-ad98c80b740a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChildInsurance.Service/CareerOptionService/?wsdl" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="07035e44-6965-4461-ab16-4964b80e8096" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChildInsurance.Service/CareerOptionService/?xsd=xsd2" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="19f9aa7c-10ec-412a-8a82-2f8cab6e9121" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChildInsurance.Service/CareerOptionService/?xsd=xsd0" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="5bebd222-3e9e-49a6-a94b-fff6f71415e1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChildInsurance.Service/CareerOptionService/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="19f9aa7c-10ec-412a-8a82-2f8cab6e9121" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChildInsurance.Service/CareerOptionService/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="07035e44-6965-4461-ab16-4964b80e8096" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ChildInsurance.Service/CareerOptionService/?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

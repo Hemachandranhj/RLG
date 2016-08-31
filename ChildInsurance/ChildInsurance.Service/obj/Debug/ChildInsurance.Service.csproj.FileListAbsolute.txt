@@ -4,3 +4,5 @@ C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\bin\
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\obj\Debug\ChildInsurance.Service.csprojResolveAssemblyReference.cache
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\obj\Debug\ChildInsurance.Service.dll
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\obj\Debug\ChildInsurance.Service.pdb
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\bin\Debug\ChildInsurance.Model.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\bin\Debug\ChildInsurance.Model.pdb

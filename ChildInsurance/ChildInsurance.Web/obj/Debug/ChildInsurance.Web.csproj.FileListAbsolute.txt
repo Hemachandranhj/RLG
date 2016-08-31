@@ -98,3 +98,5 @@ C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\bin\Syst
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\obj\Debug\ChildInsurance.Web.csprojResolveAssemblyReference.cache
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\obj\Debug\ChildInsurance.Web.dll
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\obj\Debug\ChildInsurance.Web.pdb
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\bin\ChildInsurance.Model.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\bin\ChildInsurance.Model.pdb
