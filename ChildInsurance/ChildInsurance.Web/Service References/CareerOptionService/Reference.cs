@@ -16,10 +16,10 @@ namespace ChildInsurance.Web.CareerOptionService {
     public interface ICareerOptionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption", ReplyAction="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOptionResponse")]
-        string GetNonAcademyCareerOption(ChildInsurance.Model.Service.InterestRequest interestRequest);
+        string GetNonAcademyCareerOption();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption", ReplyAction="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOptionResponse")]
-        System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync(ChildInsurance.Model.Service.InterestRequest interestRequest);
+        System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace ChildInsurance.Web.CareerOptionService {
                 base(binding, remoteAddress) {
         }
         
-        public string GetNonAcademyCareerOption(ChildInsurance.Model.Service.InterestRequest interestRequest) {
-            return base.Channel.GetNonAcademyCareerOption(interestRequest);
+        public string GetNonAcademyCareerOption() {
+            return base.Channel.GetNonAcademyCareerOption();
         }
         
-        public System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync(ChildInsurance.Model.Service.InterestRequest interestRequest) {
-            return base.Channel.GetNonAcademyCareerOptionAsync(interestRequest);
+        public System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync() {
+            return base.Channel.GetNonAcademyCareerOptionAsync();
         }
     }
 }

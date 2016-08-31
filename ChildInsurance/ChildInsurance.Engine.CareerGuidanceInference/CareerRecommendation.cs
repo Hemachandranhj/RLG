@@ -13,15 +13,12 @@ using Encog.Util.CSV;
 using Encog.Util.File;
 using Encog.Util.Simple;
 using System.IO;
-using ChildInsurance.Model.Service;
-using System.Linq;
-using System.Text;
 
 namespace Carreer
 {
     public class CareerRecommendation
     {
-        public string GetNonAcademyCareerOption(InterestRequest interestRequest)
+        public string GetNonAcademyCareerOption()
         {
             // Step 1 shuffle the data
             Shuffle(InterestConstants.BaseFile, InterestConstants.ShuffledBaseFile);
@@ -36,7 +33,6 @@ namespace Carreer
 
             return Evaluate(InterestConstants.TrainedNetworkFile, InterestConstants.AnalystFile, InterestConstants.NormalizedEvaluateFile);
         }
-
 
         public string GetAcademicOptions()
         {
@@ -151,33 +147,32 @@ namespace Carreer
             return career;
         }
 
-    }
+        public static class InterestConstants
+        {
+            public static FileInfo BasePath = new FileInfo(@"C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\App_Data");
+            public static FileInfo ShuffledBaseFile = FileUtil.CombinePath(BasePath, "InterestData_Shuffled.csv");
+            public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "InterestData.csv");
+            public static FileInfo TrainingFile = FileUtil.CombinePath(BasePath, "InterestData_Train.csv");
+            public static FileInfo EvaluateFile = FileUtil.CombinePath(BasePath, "InterestData_Eval.csv");
+            public static FileInfo EvaluateWasteFile = FileUtil.CombinePath(BasePath, "InterestData_waste.csv");
+            public static FileInfo NormalizedTrainingFile = FileUtil.CombinePath(BasePath, "InterestData_Train_Norm.csv");
+            public static FileInfo NormalizedEvaluateFile = FileUtil.CombinePath(BasePath, "InterestData_Eval_Norm.csv");
+            public static FileInfo AnalystFile = FileUtil.CombinePath(BasePath, "InterestData_Analyst.ega");
+            public static FileInfo TrainedNetworkFile = FileUtil.CombinePath(BasePath, "InterestData_Train.eg");
+        }
 
-    public static class InterestConstants
-    {
-        public static FileInfo BasePath = new FileInfo(@"C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\App_Data");
-        public static FileInfo ShuffledBaseFile = FileUtil.CombinePath(BasePath, "InterestData_Shuffled.csv");
-        public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "InterestData.csv");
-        public static FileInfo TrainingFile = FileUtil.CombinePath(BasePath, "InterestData_Train.csv");
-        public static FileInfo EvaluateFile = FileUtil.CombinePath(BasePath, "InterestData_Eval.csv");
-        public static FileInfo EvaluateWasteFile = FileUtil.CombinePath(BasePath, "InterestData_waste.csv");
-        public static FileInfo NormalizedTrainingFile = FileUtil.CombinePath(BasePath, "InterestData_Train_Norm.csv");
-        public static FileInfo NormalizedEvaluateFile = FileUtil.CombinePath(BasePath, "InterestData_Eval_Norm.csv");
-        public static FileInfo AnalystFile = FileUtil.CombinePath(BasePath, "InterestData_Analyst.ega");
-        public static FileInfo TrainedNetworkFile = FileUtil.CombinePath(BasePath, "InterestData_Train.eg");
-    }
-
-    public static class AcademicConstants
-    {
-        public static FileInfo BasePath = new FileInfo(@"C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\App_Data");
-        public static FileInfo ShuffledBaseFile = FileUtil.CombinePath(BasePath, "Academic_Shuffled.csv");
-        public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "AcademicData.csv");
-        public static FileInfo TrainingFile = FileUtil.CombinePath(BasePath, "AcademicData_Train.csv");
-        public static FileInfo EvaluateFile = FileUtil.CombinePath(BasePath, "AcademicData_Eval.csv");
-        public static FileInfo EvaluateWasteFile = FileUtil.CombinePath(BasePath, "AcademicData_waste.csv");
-        public static FileInfo NormalizedTrainingFile = FileUtil.CombinePath(BasePath, "AcademicData_Train_Norm.csv");
-        public static FileInfo NormalizedEvaluateFile = FileUtil.CombinePath(BasePath, "AcademicData_Eval_Norm.csv");
-        public static FileInfo AnalystFile = FileUtil.CombinePath(BasePath, "AcademicData_Analyst.ega");
-        public static FileInfo TrainedNetworkFile = FileUtil.CombinePath(BasePath, "AcademicData_Train.eg");
+        public static class AcademicConstants
+        {
+            public static FileInfo BasePath = new FileInfo(@"C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\App_Data");
+            public static FileInfo ShuffledBaseFile = FileUtil.CombinePath(BasePath, "Academic_Shuffled.csv");
+            public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "AcademicData.csv");
+            public static FileInfo TrainingFile = FileUtil.CombinePath(BasePath, "AcademicData_Train.csv");
+            public static FileInfo EvaluateFile = FileUtil.CombinePath(BasePath, "AcademicData_Eval.csv");
+            public static FileInfo EvaluateWasteFile = FileUtil.CombinePath(BasePath, "AcademicData_waste.csv");
+            public static FileInfo NormalizedTrainingFile = FileUtil.CombinePath(BasePath, "AcademicData_Train_Norm.csv");
+            public static FileInfo NormalizedEvaluateFile = FileUtil.CombinePath(BasePath, "AcademicData_Eval_Norm.csv");
+            public static FileInfo AnalystFile = FileUtil.CombinePath(BasePath, "AcademicData_Analyst.ega");
+            public static FileInfo TrainedNetworkFile = FileUtil.CombinePath(BasePath, "AcademicData_Train.eg");
+        }
     }
 }

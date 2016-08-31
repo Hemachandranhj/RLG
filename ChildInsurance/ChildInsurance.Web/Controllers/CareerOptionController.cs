@@ -25,7 +25,7 @@ namespace ChildInsurance.Web.Controllers
 
             WriteCsvFile(request);
 
-            var careerOption = serviceClient.GetNonAcademyCareerOption(request);
+            var careerOption = serviceClient.GetNonAcademyCareerOption();
 
             return View(careerOption);
         }
