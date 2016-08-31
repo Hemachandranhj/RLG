@@ -1,0 +1,30 @@
+﻿[
+  {
+    "y": 100,
+    "indexLabel": "PlaySt"
+  },
+  {
+    "y": 75,
+    "indexLabel": "Wii"
+  },
+  {
+    "y": 160,
+    "indexLabel": "Xbox 360"
+  },
+  {
+    "y": 200,
+    "indexLabel": "Nintendo DS"
+  },
+  {
+    "y": 250,
+    "indexLabel": "PSP"
+  },
+  {
+    "y": 50,
+    "indexLabel": "Nintendo 3DS"
+  },
+  {
+    "y": 180,
+    "indexLabel": "PS Vita"
+  }
+]

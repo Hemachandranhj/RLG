@@ -176,6 +176,8 @@
     <Content Include="bundles\fonts\stylishf.ttf" />
     <Content Include="App_Data\InterestData.csv" />
     <Content Include="App_Data\AcademicData.csv" />
+    <Content Include="bundles\js\InsurerChartData.json" />
+    <Content Include="bundles\js\InsurerChartEventData.json" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
