@@ -151,7 +151,6 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="App_Data\InterestData_Eval.csv" />
     <Content Include="bundles\fonts\lemon.otf" />
     <Content Include="bundles\fonts\roboto\Roboto-Bold.eot" />
     <Content Include="bundles\fonts\roboto\Roboto-Bold.ttf" />
@@ -174,6 +173,7 @@
     <Content Include="bundles\fonts\roboto\Roboto-Thin.woff" />
     <Content Include="bundles\fonts\roboto\Roboto-Thin.woff2" />
     <Content Include="bundles\fonts\stylishf.ttf" />
+    <Content Include="App_Data\InterestData.csv" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />

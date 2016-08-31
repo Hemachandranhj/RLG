@@ -12,11 +12,12 @@ namespace ChildInsurance.Web.Controllers
 {
     public class CareerOptionController : Controller
     {
-        // GET: CareerOption
+        private CareerOptionService.CareerOptionServiceClient serviceClient = new CareerOptionService.CareerOptionServiceClient();
+
         public ActionResult Index()
         {
             var interests = GetInterests();
-            
+
             var request = new InterestRequest
             {
                 InterestName = interests
@@ -24,45 +25,37 @@ namespace ChildInsurance.Web.Controllers
 
             WriteCsvFile(request);
 
-            var serviceClient = new CareerOptionService.CareerOptionServiceClient();
+            var careerOption = serviceClient.GetNonAcademyCareerOption(request);
 
-            serviceClient.GetNonAcademyCareerOption(request);
-
-            return View();
+            return View(careerOption);
         }
 
         private void WriteCsvFile(InterestRequest interestRequest)
         {
-            var csvContent = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
 
-            var header = string.Empty;
+            var csvContent = string.Empty;
 
             for (int i = 1; i <= interestRequest.InterestName.Count; i++)
             {
-                //Add the Header row for CSV file.
-                header += "Interest" + i;
-
-                if (i != interestRequest.InterestName.Count)
-                {
-                    header += ",";
-                }
+                csvContent += "Interest" + i + ",";
             }
 
-            csvContent.AppendLine(header);
+            csvContent += "Career";
+            sb.AppendLine(csvContent);
 
-            var content = string.Empty;
+            csvContent = string.Empty;
 
             interestRequest.InterestName.ToList().ForEach(e =>
             {
-                content += e + ",";
+                csvContent += e + ",";
             });
 
-            csvContent.AppendLine(content);
+            csvContent += "VFX Designer";
+            sb.AppendLine(csvContent);
 
-            string path = HttpContext.Server.MapPath("~/App_Data/InterestData.csv");
-            System.IO.FileStream file = System.IO.File.Create(path);
-
-            System.IO.File.AppendAllText(path, csvContent.ToString());
+            string file = Server.MapPath(@"~\App_Data\InterestData_Eval.csv");
+            System.IO.File.WriteAllText(file, sb.ToString());
         }
 
         private List<string> GetInterests()
@@ -72,7 +65,7 @@ namespace ChildInsurance.Web.Controllers
             string filePath = Server.MapPath(@"~\App_Data\Interests.xml");
             XDocument interestXml = XDocument.Load(filePath);
             var interestElements = interestXml.Elements().Elements("InterestName");
-            
+
             interestElements.ToList().ForEach(e =>
             {
                 interests.Add(e.Value);

@@ -155,7 +155,7 @@ namespace Carreer
 
     public static class InterestConstants
     {
-        public static FileInfo BasePath = new FileInfo(@"C:\Users\user\Desktop\CareerEngine\CareerEngine\Data   ");
+        public static FileInfo BasePath = new FileInfo(@"C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\App_Data");
         public static FileInfo ShuffledBaseFile = FileUtil.CombinePath(BasePath, "InterestData_Shuffled.csv");
         public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "InterestData.csv");
         public static FileInfo TrainingFile = FileUtil.CombinePath(BasePath, "InterestData_Train.csv");
@@ -169,7 +169,7 @@ namespace Carreer
 
     public static class AcademicConstants
     {
-        public static FileInfo BasePath = new FileInfo(@"C:\Users\user\Desktop\CareerEngine\CareerEngine\Data   ");
+        public static FileInfo BasePath = new FileInfo(@"C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\App_Data");
         public static FileInfo ShuffledBaseFile = FileUtil.CombinePath(BasePath, "Academic_Shuffled.csv");
         public static FileInfo BaseFile = FileUtil.CombinePath(BasePath, "AcademicData.csv");
         public static FileInfo TrainingFile = FileUtil.CombinePath(BasePath, "AcademicData_Train.csv");
