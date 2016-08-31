@@ -14,5 +14,8 @@ namespace ChildInsurance.Service
     {
         [OperationContract]
         string GetNonAcademyCareerOption();
+
+        [OperationContract]
+        string GetAcademicOptions();
     }
 }

@@ -12,16 +12,35 @@
   <wsdl:message name="ICareerOptionService_GetNonAcademyCareerOption_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetNonAcademyCareerOptionResponse" />
   </wsdl:message>
+  <wsdl:message name="ICareerOptionService_GetAcademicOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcademicOptions" />
+  </wsdl:message>
+  <wsdl:message name="ICareerOptionService_GetAcademicOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcademicOptionsResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICareerOptionService">
     <wsdl:operation name="GetNonAcademyCareerOption">
       <wsdl:input wsaw:Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption" message="tns:ICareerOptionService_GetNonAcademyCareerOption_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOptionResponse" message="tns:ICareerOptionService_GetNonAcademyCareerOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcademicOptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICareerOptionService/GetAcademicOptions" message="tns:ICareerOptionService_GetAcademicOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICareerOptionService/GetAcademicOptionsResponse" message="tns:ICareerOptionService_GetAcademicOptions_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICareerOptionService" type="tns:ICareerOptionService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetNonAcademyCareerOption">
       <soap:operation soapAction="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcademicOptions">
+      <soap:operation soapAction="http://tempuri.org/ICareerOptionService/GetAcademicOptions" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

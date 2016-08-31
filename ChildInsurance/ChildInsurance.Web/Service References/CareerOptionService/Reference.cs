@@ -20,6 +20,12 @@ namespace ChildInsurance.Web.CareerOptionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption", ReplyAction="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOptionResponse")]
         System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetAcademicOptions", ReplyAction="http://tempuri.org/ICareerOptionService/GetAcademicOptionsResponse")]
+        string GetAcademicOptions();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetAcademicOptions", ReplyAction="http://tempuri.org/ICareerOptionService/GetAcademicOptionsResponse")]
+        System.Threading.Tasks.Task<string> GetAcademicOptionsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +61,14 @@ namespace ChildInsurance.Web.CareerOptionService {
         
         public System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync() {
             return base.Channel.GetNonAcademyCareerOptionAsync();
+        }
+        
+        public string GetAcademicOptions() {
+            return base.Channel.GetAcademicOptions();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetAcademicOptionsAsync() {
+            return base.Channel.GetAcademicOptionsAsync();
         }
     }
 }
