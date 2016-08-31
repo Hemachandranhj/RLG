@@ -6,3 +6,6 @@ C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\obj\
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\obj\Debug\ChildInsurance.Service.pdb
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\bin\Debug\ChildInsurance.Model.dll
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\bin\Debug\ChildInsurance.Model.pdb
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\bin\Debug\ChildInsurance.Engine.CareerGuidanceInference.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\bin\Debug\encog-core-cs.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service\bin\Debug\ChildInsurance.Engine.CareerGuidanceInference.pdb

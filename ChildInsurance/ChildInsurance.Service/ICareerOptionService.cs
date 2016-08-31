@@ -13,6 +13,6 @@ namespace ChildInsurance.Service
     public interface ICareerOptionService
     {
         [OperationContract]
-        IList<string> GetCareerOptions(InterestRequest interestRequest);
+        string GetNonAcademyCareerOption(InterestRequest interestRequest);
     }
 }

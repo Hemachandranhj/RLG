@@ -100,3 +100,4 @@ C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\obj\Debu
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\obj\Debug\ChildInsurance.Web.pdb
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\bin\ChildInsurance.Model.dll
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\bin\ChildInsurance.Model.pdb
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\bin\encog-core-cs.dll

@@ -10,9 +10,11 @@ namespace ChildInsurance.Service
 {
     public class CareerOptionService : ICareerOptionService
     {
-        public IList<string> GetCareerOptions(InterestRequest request)
+        public string GetNonAcademyCareerOption(InterestRequest request)
         {
-            return new List<string>();
+            var careerEngine = new Carreer.CareerRecommendation();
+            var career = careerEngine.GetNonAcademyCareerOption();
+            return career;
         }
     }
 }

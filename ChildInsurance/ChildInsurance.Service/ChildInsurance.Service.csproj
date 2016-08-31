@@ -53,6 +53,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ChildInsurance.Engine.CareerGuidanceInference\ChildInsurance.Engine.CareerGuidanceInference.csproj">
+      <Project>{53372761-0651-4e01-8e7d-12c2f31ab051}</Project>
+      <Name>ChildInsurance.Engine.CareerGuidanceInference</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChildInsurance.Model\ChildInsurance.Model.csproj">
       <Project>{1801d01b-d5ff-4e5c-a2cc-1c9bef825a2f}</Project>
       <Name>ChildInsurance.Model</Name>

@@ -23,7 +23,7 @@ namespace ChildInsurance.Web.Controllers
 
             var serviceClient = new CareerOptionService.CareerOptionServiceClient();
 
-            serviceClient.GetCareerOptions(request);
+            serviceClient.GetNonAcademyCareerOption(request);
 
             return View();
         }

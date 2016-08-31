@@ -15,11 +15,11 @@ namespace ChildInsurance.Web.CareerOptionService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CareerOptionService.ICareerOptionService")]
     public interface ICareerOptionService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetCareerOptions", ReplyAction="http://tempuri.org/ICareerOptionService/GetCareerOptionsResponse")]
-        string[] GetCareerOptions(ChildInsurance.Model.Service.InterestRequest interestRequest);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption", ReplyAction="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOptionResponse")]
+        string GetNonAcademyCareerOption(ChildInsurance.Model.Service.InterestRequest interestRequest);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetCareerOptions", ReplyAction="http://tempuri.org/ICareerOptionService/GetCareerOptionsResponse")]
-        System.Threading.Tasks.Task<string[]> GetCareerOptionsAsync(ChildInsurance.Model.Service.InterestRequest interestRequest);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOption", ReplyAction="http://tempuri.org/ICareerOptionService/GetNonAcademyCareerOptionResponse")]
+        System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync(ChildInsurance.Model.Service.InterestRequest interestRequest);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace ChildInsurance.Web.CareerOptionService {
                 base(binding, remoteAddress) {
         }
         
-        public string[] GetCareerOptions(ChildInsurance.Model.Service.InterestRequest interestRequest) {
-            return base.Channel.GetCareerOptions(interestRequest);
+        public string GetNonAcademyCareerOption(ChildInsurance.Model.Service.InterestRequest interestRequest) {
+            return base.Channel.GetNonAcademyCareerOption(interestRequest);
         }
         
-        public System.Threading.Tasks.Task<string[]> GetCareerOptionsAsync(ChildInsurance.Model.Service.InterestRequest interestRequest) {
-            return base.Channel.GetCareerOptionsAsync(interestRequest);
+        public System.Threading.Tasks.Task<string> GetNonAcademyCareerOptionAsync(ChildInsurance.Model.Service.InterestRequest interestRequest) {
+            return base.Channel.GetNonAcademyCareerOptionAsync(interestRequest);
         }
     }
 }
