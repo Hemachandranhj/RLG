@@ -7,6 +7,8 @@ using ChildInsurance.Model.Service;
 using System.Xml;
 using System.Xml.Linq;
 using System.Text;
+using ChildInsurance.Web.Models;
+using ChildInsurance.Model.CareerRecommedation;
 
 namespace ChildInsurance.Web.Controllers
 {
@@ -14,9 +16,20 @@ namespace ChildInsurance.Web.Controllers
     {
         private CareerOptionService.CareerOptionServiceClient serviceClient = new CareerOptionService.CareerOptionServiceClient();
 
-        public ActionResult Index()
+        private CareerOptionViewModel viewModel = new CareerOptionViewModel();
+
+        public ActionResult CareerOption()
         {
-            var interests = GetInterests();
+            viewModel.NonAcademicCareerRecommedation = new List<CareerRecommedation>();
+
+            ProcessNonAcademicCareerOption();
+
+            return View(viewModel);
+        }
+
+        private void ProcessNonAcademicCareerOption()
+        {
+            var interests = GetNonAcademicInterests();
 
             var request = new InterestRequest
             {
@@ -27,7 +40,35 @@ namespace ChildInsurance.Web.Controllers
 
             var careerOption = serviceClient.GetNonAcademyCareerOption();
 
-            return View(careerOption);
+            PopulateNonAcademicCareerOptionViewModel(interests, careerOption);
+        }
+
+        private void PopulateNonAcademicCareerOptionViewModel(List<string> interests, string careerOption)
+        {
+            viewModel.NonAcademicCareerRecommedation = new List<CareerRecommedation>();
+
+            var interestModel = ConvertRequestToModel(interests);
+
+            var careerRecommedation = new CareerRecommedation();
+            careerRecommedation.Interests = interestModel;
+            careerRecommedation.CareerOption = careerOption;
+
+            viewModel.NonAcademicCareerRecommedation.Add(careerRecommedation);
+        }
+
+        private IList<Interest> ConvertRequestToModel(IList<string> interests)
+        {
+            var interestModel = new List<Interest>();
+
+            interests.ToList().ForEach(e => 
+                        {
+                            interestModel.Add(new Interest
+                            {
+                                InterestName = e
+                            });
+                        });
+
+            return interestModel;
         }
 
         private void WriteCsvFile(InterestRequest interestRequest)
@@ -58,7 +99,7 @@ namespace ChildInsurance.Web.Controllers
             System.IO.File.WriteAllText(file, sb.ToString());
         }
 
-        private List<string> GetInterests()
+        private List<string> GetNonAcademicInterests()
         {
             var interests = new List<string>();
 

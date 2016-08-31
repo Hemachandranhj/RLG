@@ -32,20 +32,28 @@ goal=classification
 "Career",1,1,0,0,0.0001,-0.0001,0,0,""
 [DATA:CLASSES]
 "field","code","name"
-"Interest1","Direction","Direction",1
-"Interest1","Math Olympiad","Math Olympiad",1
-"Interest1","Mathematics","Mathematics",1
-"Interest1","Photographer","Photographer",1
-"Interest2","Business","Business",1
-"Interest2","Commerce","Commerce",1
+"Interest1","Direction","Direction",2
+"Interest1","Entrepreneurship","Entrepreneurship",1
+"Interest1","Photographer","Photographer",3
+"Interest1","Public Speaking","Public Speaking",3
+"Interest1","Web Design","Web Design",1
+"Interest2","Business","Business",2
+"Interest2","Debates","Debates",1
 "Interest2","Designing","Designing",1
+"Interest2","Direction","Direction",2
 "Interest2","Dramatics","Dramatics",1
+"Interest2","Extempores","Extempores",2
+"Interest2","Film Making","Film Making",1
+"Interest3","Animation","Animation",1
 "Interest3","Art","Art",1
+"Interest3","Business","Business",1
+"Interest3","Debates","Debates",2
+"Interest3","Desiging","Desiging",1
+"Interest3","Direction","Direction",2
 "Interest3","Drawing","Drawing",1
-"Interest3","Economics","Economics",1
-"Interest3","Quizes","Quizes",1
-"Career","Chartered Accountant","Chartered Accountant",2
-"Career","VFX Designer","VFX Designer",2
+"Interest3","Entrepreneurship","Entrepreneurship",1
+"Career","Event Management","Event Management",7
+"Career","VFX Designer","VFX Designer",3
 [NORMALIZE]
 [NORMALIZE:CONFIG]
 missingValues=DiscardMissing
@@ -91,7 +99,7 @@ sourceFile=FILE_NORMALIZE
 targetFile=FILE_TRAINSET
 [ML]
 [ML:CONFIG]
-architecture=?:B->TANH->13:B->TANH->?
+architecture=?:B->TANH->25:B->TANH->?
 evalFile=FILE_EVAL
 machineLearningFile=FILE_ML
 outputFile=FILE_OUTPUT

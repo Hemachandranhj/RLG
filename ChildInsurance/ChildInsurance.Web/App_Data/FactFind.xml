@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<FactFindViewModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StudentId>110c6776-9da9-49d2-807f-ee474c292cd7</StudentId>
+  <Asset>20</Asset>
+  <Liablity>21</Liablity>
+  <Income>22</Income>
+  <Expenditure>23</Expenditure>
+</FactFindViewModel>
