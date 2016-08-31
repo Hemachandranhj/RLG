@@ -13,7 +13,7 @@ namespace ChildInsurance.Service
         public string GetNonAcademyCareerOption(InterestRequest request)
         {
             var careerEngine = new Carreer.CareerRecommendation();
-            var career = careerEngine.GetNonAcademyCareerOption();
+            var career = careerEngine.GetNonAcademyCareerOption(request);
             return career;
         }
     }

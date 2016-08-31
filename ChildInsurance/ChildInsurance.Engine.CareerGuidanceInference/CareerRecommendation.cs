@@ -13,13 +13,17 @@ using Encog.Util.CSV;
 using Encog.Util.File;
 using Encog.Util.Simple;
 using System.IO;
+using ChildInsurance.Model.Service;
+using System.Linq;
+using System.Text;
 
 namespace Carreer
 {
     public class CareerRecommendation
     {
-        public string GetNonAcademyCareerOption()
+        public string GetNonAcademyCareerOption(InterestRequest interestRequest)
         {
+            WriteCsvFile(interestRequest);
             // Step 1 shuffle the data
             Shuffle(InterestConstants.BaseFile, InterestConstants.ShuffledBaseFile);
             // Step 2 Segregate data for evaluation
@@ -32,6 +36,37 @@ namespace Carreer
             TrainNetwork(InterestConstants.TrainedNetworkFile, InterestConstants.NormalizedTrainingFile);
 
             return Evaluate(InterestConstants.TrainedNetworkFile, InterestConstants.AnalystFile, InterestConstants.NormalizedEvaluateFile);
+        }
+
+        private void WriteCsvFile(InterestRequest interestRequest)
+        {
+            var csvContent = new StringBuilder();
+
+            var header = string.Empty;
+
+            for (int i = 1; i <= interestRequest.InterestName.Count; i++)
+            {
+                //Add the Header row for CSV file.
+                header += "Interest" + i;
+
+                if (i != interestRequest.InterestName.Count)
+                {
+                    header += ",";
+                }
+            }
+
+            csvContent.AppendLine(header);
+
+            var content = string.Empty;
+
+            interestRequest.InterestName.ToList().ForEach(e =>
+            {
+                content += e + ",";
+            });
+
+            csvContent.AppendLine(content);
+
+            File.AppendAllText(@"C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Web\App_Data", csvContent.ToString());
         }
 
         public string GetAcademicOptions()
@@ -69,7 +104,7 @@ namespace Carreer
             seg.Process();
         }
 
-        private void Normalize( FileInfo BaseFile, FileInfo TrainingFile, FileInfo NormalizedTrainingFile, FileInfo EvaluateFile, FileInfo NormalizedEvaluateFile, FileInfo AnalystFile)
+        private void Normalize(FileInfo BaseFile, FileInfo TrainingFile, FileInfo NormalizedTrainingFile, FileInfo EvaluateFile, FileInfo NormalizedEvaluateFile, FileInfo AnalystFile)
         {
             //Analyst
             var analyst = new EncogAnalyst();
@@ -121,7 +156,7 @@ namespace Carreer
             EncogDirectoryPersistence.SaveObject(TrainedNetworkFile, (BasicNetwork)network);
         }
 
-        public string Evaluate(FileInfo TrainedNetworkFile, FileInfo AnalystFile,FileInfo NormalizedEvaluateFile)
+        public string Evaluate(FileInfo TrainedNetworkFile, FileInfo AnalystFile, FileInfo NormalizedEvaluateFile)
         {
             var network = (BasicNetwork)EncogDirectoryPersistence.LoadObject(TrainedNetworkFile);
             var analyst = new EncogAnalyst();

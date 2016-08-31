@@ -15,7 +15,7 @@ namespace ChildInsurance.Web.Controllers
         public ActionResult Index()
         {
             var interests = GetInterests();
-
+            
             var request = new InterestRequest
             {
                 InterestName = interests
