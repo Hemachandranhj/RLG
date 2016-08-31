@@ -42,7 +42,6 @@ namespace ChildInsurance.Web.Controllers
             WriteCsvFile(request, "Chartered Accountant", "AcademicData_Eval");
 
             var careerOption = serviceClient.GetAcademicCareerOptions();
-
             PopulateAcademicCareerOptionViewModel(interests, careerOption);
         }
 

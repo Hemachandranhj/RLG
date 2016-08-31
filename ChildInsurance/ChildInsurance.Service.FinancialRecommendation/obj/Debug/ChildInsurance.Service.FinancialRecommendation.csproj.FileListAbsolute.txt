@@ -1,0 +1,8 @@
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service.FinancialRecommendation\obj\Debug\ChildInsurance.Service.FinancialRecommendation.csprojResolveAssemblyReference.cache
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service.FinancialRecommendation\bin\Debug\ChildInsurance.Service.FinancialRecommendation.dll.config
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service.FinancialRecommendation\bin\Debug\ChildInsurance.Service.FinancialRecommendation.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service.FinancialRecommendation\bin\Debug\ChildInsurance.Service.FinancialRecommendation.pdb
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service.FinancialRecommendation\bin\Debug\ChildInsurance.Engine.FinancialRecommendation.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service.FinancialRecommendation\bin\Debug\ChildInsurance.Engine.FinancialRecommendation.pdb
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service.FinancialRecommendation\obj\Debug\ChildInsurance.Service.FinancialRecommendation.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Service.FinancialRecommendation\obj\Debug\ChildInsurance.Service.FinancialRecommendation.pdb
