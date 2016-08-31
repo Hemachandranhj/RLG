@@ -199,6 +199,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\FactFindViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\CareerOptionService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -231,6 +232,7 @@
     </None>
     <Content Include="Views\CareerOption\Index.cshtml" />
     <Content Include="Views\FactFind\Index.cshtml" />
+    <Content Include="Views\FactFind\FactFind.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -238,9 +240,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ChildInsurance.Engine.CareerGuidanceInference\ChildInsurance.Engine.CareerGuidanceInference.csproj">
       <Project>{53372761-0651-4e01-8e7d-12c2f31ab051}</Project>
