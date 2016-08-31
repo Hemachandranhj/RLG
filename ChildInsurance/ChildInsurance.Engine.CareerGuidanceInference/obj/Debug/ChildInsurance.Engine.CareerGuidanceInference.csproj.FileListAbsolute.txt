@@ -2,3 +2,8 @@ E:\Application\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\bin\
 E:\Application\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\bin\Debug\ChildInsurance.Engine.CareerGuidanceInference.pdb
 E:\Application\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\obj\Debug\ChildInsurance.Engine.CareerGuidanceInference.dll
 E:\Application\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\obj\Debug\ChildInsurance.Engine.CareerGuidanceInference.pdb
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\bin\Debug\ChildInsurance.Engine.CareerGuidanceInference.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\bin\Debug\ChildInsurance.Engine.CareerGuidanceInference.pdb
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\obj\Debug\ChildInsurance.Engine.CareerGuidanceInference.csprojResolveAssemblyReference.cache
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\obj\Debug\ChildInsurance.Engine.CareerGuidanceInference.dll
+C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.CareerGuidanceInference\obj\Debug\ChildInsurance.Engine.CareerGuidanceInference.pdb
