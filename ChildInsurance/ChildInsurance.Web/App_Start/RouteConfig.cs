@@ -16,7 +16,7 @@ namespace ChildInsurance.Web
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}",
-                defaults: new { controller = "CareerOption", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "FactFind", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

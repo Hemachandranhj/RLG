@@ -121,6 +121,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Interests.xml" />
+    <Content Include="bundles\css\custom.css" />
+    <Content Include="bundles\css\materialize.css" />
+    <Content Include="bundles\css\materialize.min.css" />
+    <Content Include="bundles\images\dp.PNG" />
+    <Content Include="bundles\images\Insurer_a1-01.png" />
+    <Content Include="bundles\images\Insurer_a1-02.png" />
+    <Content Include="bundles\images\Insurer_a1-03.png" />
+    <Content Include="bundles\images\Insurer_a1-04.png" />
+    <Content Include="bundles\images\Insurer_a1-05.png" />
+    <Content Include="bundles\images\Insurer_a1-06.png" />
+    <Content Include="bundles\images\Insurer_a1-07.png" />
+    <Content Include="bundles\images\Insurer_a1-08.png" />
+    <Content Include="bundles\images\Insurer_a1-09.png" />
+    <Content Include="bundles\images\kids1.png" />
+    <Content Include="bundles\images\kids2.png" />
+    <Content Include="bundles\images\paper plane-01.png" />
+    <Content Include="bundles\images\welcome.PNG" />
+    <Content Include="bundles\images\yuna.jpg" />
+    <Content Include="bundles\js\canvasjs.min.js" />
+    <Content Include="bundles\js\materialize.js" />
+    <Content Include="bundles\js\materialize.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -132,6 +153,28 @@
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="App_Data\InterestData.csv" />
     <Content Include="App_Data\InterestData_Eval.csv" />
+    <Content Include="bundles\fonts\lemon.otf" />
+    <Content Include="bundles\fonts\roboto\Roboto-Bold.eot" />
+    <Content Include="bundles\fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="bundles\fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="bundles\fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="bundles\fonts\roboto\Roboto-Light.eot" />
+    <Content Include="bundles\fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="bundles\fonts\roboto\Roboto-Light.woff" />
+    <Content Include="bundles\fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="bundles\fonts\roboto\Roboto-Medium.eot" />
+    <Content Include="bundles\fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="bundles\fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="bundles\fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="bundles\fonts\roboto\Roboto-Regular.eot" />
+    <Content Include="bundles\fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="bundles\fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="bundles\fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="bundles\fonts\roboto\Roboto-Thin.eot" />
+    <Content Include="bundles\fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="bundles\fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="bundles\fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="bundles\fonts\stylishf.ttf" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -151,6 +194,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CareerOptionController.cs" />
+    <Compile Include="Controllers\FactFindController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -186,6 +230,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\CareerOption\Index.cshtml" />
+    <Content Include="Views\FactFind\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
