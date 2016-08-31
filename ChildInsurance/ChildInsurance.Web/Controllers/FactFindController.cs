@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using ChildInsurance.Web.Models;
 using System.IO;
@@ -11,45 +9,42 @@ namespace ChildInsurance.Web.Views
 {
     public class FactFindController : Controller
     {
-        // GET: FactFind
-        public ActionResult FinancialPlanning(Guid id)
+        [HttpGet]
+        public ActionResult FactFind(Guid id)
         {
             FactFindViewModel model = new FactFindViewModel();
-            try
+
+            id = (id == null) ? Guid.NewGuid() : id;
+
+            var xmldoc = new XmlDataDocument();
+            XmlNodeList xmlnode;
+            XmlNode node;
+
+            model.StudentId = id;
+            string path = HttpContext.Server.MapPath("~/App_Data/FactFind.xml");
+            FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+            xmldoc.Load(fs);
+            fs.Close();
+            fs.Dispose();
+            node = xmldoc.SelectSingleNode("StudentId");
+            xmlnode = xmldoc.GetElementsByTagName("StudentId");
+            Guid studentId = Guid.Parse(xmlnode[0].InnerText);
+            if (id == studentId)
             {
-                id = (id == null) ? Guid.NewGuid() : id;
-
-                XmlDataDocument xmldoc = new XmlDataDocument();
-                XmlNodeList xmlnode;
-                XmlNode node;
-
-                model.StudentId = id;
-                string path = HttpContext.Server.MapPath("~/App_Data/FactFind.xml");
-                FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
-                xmldoc.Load(fs);
-                node = xmldoc.SelectSingleNode("StudentId");
-                xmlnode = xmldoc.GetElementsByTagName("StudentId");
-                Guid studentId = Guid.Parse(xmlnode[0].InnerText);
-                if (id == studentId)
-                {
-                    model.Asset = xmldoc.GetElementsByTagName("Asset")[0].InnerXml;
-                    model.Expenditure = xmldoc.GetElementsByTagName("Expenditure")[0].InnerXml;
-                    model.Income = xmldoc.GetElementsByTagName("Income")[0].InnerXml;
-                    model.Liablity = xmldoc.GetElementsByTagName("Liablity")[0].InnerXml;
-
-                }
-                return View(model);
+                model.Asset = xmldoc.GetElementsByTagName("Asset")[0].InnerXml;
+                model.Expenditure = xmldoc.GetElementsByTagName("Expenditure")[0].InnerXml;
+                model.Income = xmldoc.GetElementsByTagName("Income")[0].InnerXml;
+                model.Liablity = xmldoc.GetElementsByTagName("Liablity")[0].InnerXml;
             }
-            catch (FileNotFoundException ex)
-            {
-                return View(model);
-            }
+
+            model.StudentId = id;
+
+            return View(model);
         }
 
         [HttpPost]
-        public ActionResult SubmitPlan(FactFindViewModel model)
+        public ActionResult FactFind(FactFindViewModel model)
         {
-
             System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(FactFindViewModel));
 
             string path = HttpContext.Server.MapPath("~/App_Data/FactFind.xml");
@@ -58,7 +53,7 @@ namespace ChildInsurance.Web.Views
 
             writer.Serialize(file, model);
             file.Close();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("FactFind", "FactFind");
         }
     }
 }

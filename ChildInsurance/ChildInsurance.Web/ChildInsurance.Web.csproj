@@ -225,7 +225,6 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\CareerOption\Index.cshtml" />
-    <Content Include="Views\FactFind\Index.cshtml" />
     <Content Include="Views\FactFind\FactFind.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
