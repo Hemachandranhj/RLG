@@ -3,224 +3,207 @@
     Layout = null;
     ViewBag.Title = "FactFind";
 }
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <link type="text/css" rel="stylesheet" href="../../bundles/css/materialize.min.css" />
-    <link type="text/css" rel="stylesheet" href="../../bundles/css/custom.css" />
+    <title>Finantial Planning</title>
+    <link type="text/css" rel="stylesheet" href="./bundles/css/materialize.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./bundles/js/materialize.js"></script>
+    <link href="http://materializecss.com/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <script>
+
+            $(".button-collapse").sideNav();
+            $(document).ready(function() {
+                $('.modal-trigger').leanModal();
+            });
+    </script>
+    <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+    <style type="text/css">
+        table.gridtable {
+            font-family: inherit;
+            font-size: 15px;
+            color: #333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            line-height: 1;
+        }
+
+            table.gridtable th {
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #666666;
+                background-color: #dedede;
+            }
+
+            table.gridtable td {
+                border-width: 4px;
+                padding: 5px;
+                border-style: solid;
+                border-color: #f5f5f5;
+                background-color: #ffffff;
+                height: 85px;
+                text-align: center;
+            }
+
+            table.gridtable i {
+                height: 1;
+                font-size: 36px;
+            }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
-            <i class="material-icons">menu</i>
-        </a>
-    </div>
-    <div class="row top-nav nomargin">
-        <div class="col l12 s12 m12">
-            <ul id="dropdown1" class="dropdown-content">
-                <li>
-                    <a href="#!">one</a>
-                </li>
-                <li>
-                    <a href="#!">two</a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#!">three</a>
-                </li>
-            </ul>
-            <nav>
-                <div class="nav-wrapper">
-                    <ul class="right">
-                        <li class="username">
-                            Welcome
-                            <span class="title">Shine Taylor</span>
-                            <img src="../../bundles/images/yuna.jpg" alt="" class="circle">
-                        </li>
-                        <li>
-                            <a class="dropdown-button" href="#!" data-activates="dropdown1">
-                                <i class="material-icons">mail_outline</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="badges.html">
-                                <i class="material-icons">notifications</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="collapsible.html">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <div class="row skew-blue nomargin">
-        <div class="col l1 s1 m1">
-            <h5>City</h5>
-        </div>
-        <div class="col l2 s2 m2">
-            <select class="browser-default">
-                <option value="1">Chennai</option>
-                <option value="2">Coimbatore</option>
-            </select>
-        </div>
-        <div class="col l1 s1 m1">
-            <h5>School</h5>
-        </div>
-        <div class="col l2 s2 m2">
-            <select class="browser-default">
-                <option value="1">Vels Vidyashram</option>
-                <option value="2">School 2</option>
-                <option value="3">School 3</option>
-            </select>
-        </div>
-    </div>
-    <aside>
-        <div id="nav-mobile" class="side-nav fixed blue-grey darken-4 ">
-            <div class="row nomargin">
-                <div class="col l11 collection nomargin">
-                    <div class="collection-item avatar blue-grey darken-4 white-text">
-                        <img src="../../bundles/images/yuna.jpg" alt="" class="circle">
-                        <p class="title">Shine Taylor</p>
-                        <p class="nomargin">
-                            <span class="online">&#8226;</span>
-                            Online
-
-
-
-                        </p>
-                    </div>
-                </div>
+<body class="grey lighten-5">
+    <!-- top nav -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper cyan darken-3 z-depth-1">
+                <a href="#" data-activates="slide-out" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <a href="#" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">mail_outline</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">notifications_none</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
             </div>
+        </nav>
+    </div>
+    <!-- top nav end -->
+    <!-- side nav -->
+    <ul id="slide-out" class="side-nav fixed grey lighten-4 z-depth-3">
+        <li class="hoverable">
+            <div class="userView ">
+                <img class="background" src="./bundles/images/office3.jpg">
+                <a href="#!user">
+                    <img class="circle" src="./bundles/images/yuna.jpg">
+                </a>
+                <a href="#!name">
+                    <span class="white-text name">John Doe</span>
+                </a>
+                <a href="#!email">
+                    <span class="white-text email">jdandturk@gmail.com</span>
+                </a>
+            </div>
+        </li>
+        
+        <li>
+            <!-- Table goes in the document BODY -->
             <div class="row">
-                <nav class="col l10 offset-l1 custom-search">
-                    <div class="nav-wrapper">
-                        <form>
-                            <div class="input-field">
-                                <input id="search" type="search" required>
-                                <label for="search">
-                                    <i class="material-icons">search</i>
-                                </label>
+                <table class="gridtable col l10 offset-l1">
+                    <tr>
+                        <td class="card indigo lighten-2 white-text hoverable">
+                            <div>
+                                <a href="@Url.Action("Index", "FinancialRecommendation")" style="display:inline-block;height:100%;">
+                                    <p style="line-height:1;" class="white-text">
+                                        <i class="material-icons">local_atm</i>
+                                        <br />Financial Recommedation
+                                    </p>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="card indigo white-text hoverable">
+                            <div>
+                                <a href="@Url.Action("Index", "CareerOption")" style="display:inline-block;height:100%;">
+                                    <p style="line-height:1;" class="white-text">
+                                        <i class="material-icons">business_center</i>
+                                        <br />Career Recommedation
+                                    </p>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="card indigo white-text hoverable">
+                            <i class="material-icons">assessment</i>
+                            <br>Track Progress
+                        </td>
+                        <td class="card indigo lighten-2 white-text hoverable"><i class="material-icons">today</i><br>Event Planning</td>
+                    </tr>
+                    <tr>
+                        <td class="card indigo lighten-2 white-text hoverable"><i class="material-icons">remove_red_eye</i><br>Track Events</td>
+                        <td class="card indigo white-text hoverable"><i class="material-icons">assignment_turned_in</i><br>Track Review Meetings</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="card indigo lighten-1 white-text hoverable"><i class="material-icons">compare_arrows</i><br>Connect With Export Group</td>
+                    </tr>
+                    <tr>
+                        <td class="card indigo white-text hoverable"><i class="material-icons">account_balance</i><br>Manage School Insurance</td>
+                        <td class="card indigo lighten-2 white-text hoverable"><i class="material-icons">monetization_on</i><br>Crowd Funding</td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+    </ul>
+
+    <!-- side nav end-->
+    <br>
+    <br>
+    <!-- card -->
+    <div class="row">
+        <div class="col s10 m10 l7 offset-l4 offset-s1 offset-m1">
+            <h3 class="flow-text">
+                <font color="#0097a7" size="23">Find Facts</font>
+            </h3>
+            <div class="card grey lighten-5 black-text hoverable">
+                <div class="card-content  cyan darken-2 white-text" style="height:60px;font-size:24px;">
+
+                </div>
+                <div class="card-content ">
+                    <div class="row">
+                        @using (Html.BeginForm("FactFind", "FactFind", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    @Html.TextBoxFor(m => m.Asset, new { @class = "validate" })
+                                    <label for="first_name">Asset</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    @Html.TextBoxFor(m => m.Liablity, new { @class = "validate" })
+                                    <label for="last_name">Liability</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    @Html.TextBoxFor(m => m.Income, new { @class = "validate" })
+                                    <label for="first_name">Income</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    @Html.TextBoxFor(m => m.Expenditure, new { @class = "validate" })
+                                    <label for="last_name">Expenditure</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col sl6 offset-l6">
+                                    @Html.HiddenFor(m => m.StudentId)
+                                    <input id="first_name" value="Recommed plan" type="submit" class="validate waves-effect waves-light btn factfindbtn">
+                                </div>
                             </div>
                         </form>
-                    </div>
-                </nav>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col s6 l6 m6 skew-blue cards">
-                        <span class="cards9"></span>
-                        <a href="@Url.Action("Index", "CareerOption")"><p>Career Recommedation</p></a>
-                    </div>
-                    <div class="col s6 l6 m6 dark-blue cards">
-                        <span class="cards8"></span>
-                        <p>Financial Recommedation</p>
-                    </div>
-
-                    <div class="col s6 l6 m6 dark-blue cards">
-                        <span class="cards1"></span>
-                        <p>Track Progress</p>
-                    </div>
-                    <div class="col s6 l6 m6 skew-blue cards">
-                        <span class="cards2"></span>
-                        <p>Event Planning</p>
-                    </div>
-                    <div class="col s6 l6 m6 pure-blue cards">
-                        <span class="cards3"></span>
-                        <p>Track Events</p>
-                    </div>
-                    <div class="col s6 l6 m6 grey-blue cards">
-                        <span class="cards4"></span>
-                        <p>Track Review Meetings</p>
-                    </div>
-                    <div class="col s12 l12 m12 skew-blue cards">
-                        <span class="cards5"></span>
-                        <p>Connect with Export Groups</p>
-                    </div>
-                    <div class="col s6 l6 m6 grey-blue cards">
-                        <span class="cards6"></span>
-                        <p>Crowd Funding</p>
-                    </div>
-                    <div class="col s6 l6 m6 pure-blue cards">
-                        <span class="cards7"></span>
-                        <p>Manage School Insurance</p>
+                        }
                     </div>
                 </div>
             </div>
         </div>
-    </aside>
-    <main>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-
-
-            <div class="col s9 m9 l9 offset-l1">
-                <div class="white-text" style="background-color: #1a2226;
-    /*position: absolute;*/
-    /*float: left;*/
-    font-size: 35px;
-    width: 338px;
-    bottom: 50%;
-    padding-left: 17px;">Find Fact</div>
-                @using (Html.BeginForm("FactFind", "FactFind", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                {
-                <div class="card blue-grey darken-1">
-                    <div class="card-content white-text factfind">
-                        <div class="row">
-                            <form class="col s12">
-                                <div class="row">
-                                    <div class="input-field col l3 offset-l2">
-                                        Asset
-                                    </div>
-                                    <div class="input-field col l6">
-                                        @Html.TextBoxFor(m => m.Asset, new { @class = "form-control" })
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col l3 offset-l2" align="left">
-                                        Liability
-                                    </div>
-                                    <div class="input-field col s6">
-                                        @Html.TextBoxFor(m => m.Liablity, new { @class = "form-control" })
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col l3 offset-l2" align="left">
-                                        Income
-                                    </div>
-                                    <div class="input-field col s6">
-                                        @Html.TextBoxFor(m => m.Income, new { @class = "form-control" })
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col l3 offset-l2" align="left">
-                                        Expenditure
-                                    </div>
-                                    <div class="input-field col s6">
-                                        @Html.TextBoxFor(m => m.Expenditure, new { @class = "form-control" })
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    @Html.HiddenFor(m => m.StudentId)
-                                    <div class="input-field col l4 offset-l7">
-                                        <input id="first_name" value="Recommeded plan" type="submit" class="validate waves-effect waves-light btn factfindbtn">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                }
-            </div>
-        </div>
-    </main>
+        <!-- card -->
+        <script>
+            $(".button-collapse").sideNav();
+        </script>
 </body>
 </html>

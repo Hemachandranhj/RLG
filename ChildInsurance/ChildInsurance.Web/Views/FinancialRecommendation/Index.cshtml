@@ -2,182 +2,203 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE HTML>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="../../bundles/css/materialize.min.css" />
-    <link type="text/css" rel="stylesheet" href="../../bundles/css/custom.css" />
+    <title>Finantial Recomendation</title>
+    <link type="text/css" rel="stylesheet" href="./bundles/css/materialize.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./bundles/js/materialize.js"></script>
+    <link href="http://materializecss.com/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <script>
+
+        $(".button-collapse").sideNav();
+        $(document).ready(function () {
+            $('.modal-trigger').leanModal();
+        });
+    </script>
+    <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+    <style type="text/css">
+        table.gridtable {
+            font-family: inherit;
+            font-size: 15px;
+            color: #333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            line-height: 1;
+        }
+
+            table.gridtable th {
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #666666;
+                background-color: #dedede;
+            }
+
+            table.gridtable td {
+                border-width: 4px;
+                padding: 5px;
+                border-style: solid;
+                border-color: #f5f5f5;
+                background-color: #ffffff;
+                height: 85px;
+                text-align: center;
+            }
+
+            table.gridtable i {
+                height: 1;
+                font-size: 36px;
+            }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
-                <i class="material-icons">menu</i>
-            </a>
-        </div>
-        <div class="row top-nav nomargin">
-            <div class="col l12 s12 m12">
-                <ul id="dropdown1" class="dropdown-content">
+<body class="grey lighten-5">
+    <!-- top nav -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper cyan darken-3 z-depth-1">
+                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" data-activates="slide-out" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
-                        <a href="#!">one</a>
+                        <a href="#">
+                            <i class="material-icons">mail_outline</i>
+                        </a>
                     </li>
                     <li>
-                        <a href="#!">two</a>
+                        <a href="#">
+                            <i class="material-icons">notifications_none</i>
+                        </a>
                     </li>
-                    <li class="divider"></li>
                     <li>
-                        <a href="#!">three</a>
+                        <a href="#">Logout</a>
                     </li>
                 </ul>
-                <nav>
-                    <div class="nav-wrapper">
-                        <ul class="right">
-                            <li class="username">
-                                Welcome
-                                <span class="title">Shine Taylor</span>
-                                <img src="../../bundles/images/yuna.jpg" alt="" class="circle">
-                            </li>
-                            <li>
-                                <a class="dropdown-button" href="#!" data-activates="dropdown1">
-                                    <i class="material-icons">mail_outline</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="badges.html">
-                                    <i class="material-icons">notifications</i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="collapsible.html">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
             </div>
-        </div>
-        <div class="row skew-blue nomargin">
-            <div class="col l2 s2 m2">
-                <label>City</label>
+        </nav>
+    </div>
+    <!-- top nav end -->
+    <!-- side nav -->
+    <ul id="slide-out" class="side-nav fixed grey lighten-4 z-depth-3">
+        <li class="hoverable">
+            <div class="userView ">
+                <img class="background" src="./bundles/images/office3.jpg">
+                <a href="#!user">
+                    <img class="circle" src="./bundles/images/yuna.jpg">
+                </a>
+                <a href="#!name">
+                    <span class="white-text name">John Doe</span>
+                </a>
+                <a href="#!email">
+                    <span class="white-text email">jdandturk@gmail.com</span>
+                </a>
             </div>
-            <div class="col l2 s2 m2">
-                <input type="text" />
-            </div>
-            <div class="col l2 s2 m2">
-                <label>School</label>
-            </div>
-            <div class="col l2 s2 m2">
-                <input type="text" />
-            </div>
-        </div>
-        </div>
-    </header>
-    <aside>
-        <div id="nav-mobile" class="side-nav fixed blue-grey darken-4 ">
-            <div class="row nomargin">
-                <div class="col l11 collection nomargin">
-                    <div class="collection-item avatar blue-grey darken-4 white-text">
-                        <img src="../../bundles/images/yuna.jpg" alt="" class="circle">
-                        <p class="title">Shine Taylor</p>
-                        <p class="nomargin">
-                            <span class="online">&#8226;</span>
-                            Online
-                        </p>
-                    </div>
-                </div>
-            </div>
+        </li>
+        
+        <li>
+            <!-- Table goes in the document BODY -->
             <div class="row">
-                <nav class="col l10 offset-l1 custom-search">
-                    <div class="nav-wrapper">
-                        <form>
-                            <div class="input-field">
-                                <input id="search" type="search" required>
-                                <label for="search">
-                                    <i class="material-icons">search</i>
-                                </label>
+                <table class="gridtable col l10 offset-l1">
+                    <tr>
+                        <td class="card indigo lighten-2 white-text hoverable">
+                            <div>
+                                <a href="@Url.Action("Index", "FinancialRecommendation")" style="display:inline-block;height:100%;">
+                                    <p style="line-height:1;" class="white-text">
+                                        <i class="material-icons">local_atm</i>
+                                        <br />Financial Recommedation
+                                    </p>
+                                </a>
                             </div>
-                        </form>
-                    </div>
-                </nav>
+                        </td>
+                        <td class="card indigo white-text hoverable">
+                            <div>
+                                <a href="@Url.Action("Index", "CareerOption")" style="display:inline-block;height:100%;">
+                                    <p style="line-height:1;" class="white-text">
+                                        <i class="material-icons">business_center</i>
+                                        <br />Career Recommedation
+                                    </p>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="card indigo white-text hoverable">
+                            <i class="material-icons">assessment</i>
+                            <br>Track Progress
+                        </td>
+                        <td class="card indigo lighten-2 white-text hoverable"><i class="material-icons">today</i><br>Event Planning</td>
+                    </tr>
+                    <tr>
+                        <td class="card indigo lighten-2 white-text hoverable"><i class="material-icons">remove_red_eye</i><br>Track Events</td>
+                        <td class="card indigo white-text hoverable"><i class="material-icons">assignment_turned_in</i><br>Track Review Meetings</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="card indigo lighten-1 white-text hoverable"><i class="material-icons">compare_arrows</i><br>Connect With Export Group</td>
+                    </tr>
+                    <tr>
+                        <td class="card indigo white-text hoverable"><i class="material-icons">account_balance</i><br>Manage School Insurance</td>
+                        <td class="card indigo lighten-2 white-text hoverable"><i class="material-icons">monetization_on</i><br>Crowd Funding</td>
+                    </tr>
+                    <tr>
+                        <td class="card indigo lighten-1 white-text hoverable"><i class="material-icons">local_atm</i><br>Finantial Recomendation</td>
+                        <td class="card indigo white-text hoverable"><i class="material-icons">business_center</i><br>Career Recomendation</td>
+                    </tr>
+                </table>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col s6 l6 m6 dark-blue cards">
-                        <span class="cards1"></span>
-                        <p>Track Progress</p>
-                    </div>
-                    <div class="col s6 l6 m6 skew-blue cards">
-                        <span class="cards2"></span>
-                        <p>Event Planning</p>
-                    </div>
-                    <div class="col s6 l6 m6 pure-blue cards">
-                        <span class="cards3"></span>
-                        <p>Track Events</p>
-                    </div>
-                    <div class="col s6 l6 m6 grey-blue cards">
-                        <span class="cards4"></span>
-                        <p>Track Review Meetings</p>
-                    </div>
-                    <div class="col s12 l12 m12 skew-blue cards">
-                        <span class="cards5"></span>
-                        <p>Connect with Export Groups</p>
-                    </div>
-                    <div class="col s6 l6 m6 grey-blue cards">
-                        <span class="cards6"></span>
-                        <p>Crowd Funding</p>
-                    </div>
-                    <div class="col s6 l6 m6 pure-blue cards">
-                        <span class="cards7"></span>
-                        <p>Manage School Insurance</p>
-                    </div>
-                    <div class="col s6 l6 m6 dark-blue cards">
-                        <span class="cards8"></span>
-                        <p>Financial Recommedation</p>
-                    </div>
-                    <div class="col s6 l6 m6 skew-blue cards">
-                        <span class="cards9"></span>
-                        <p>Career Recommedation</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </aside>
-    <main>
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        <a href=@Url.Action("AbroadIndex", "FinancialRecommendation")>Aboard</a>
-                        <a href=@Url.Action("Index", "FinancialRecommendation")>Domestic</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <h4 class="head-content">@ViewData["Selected"] - Short Fall Projection</h4>
-        <div class="events">
-            <div class="container">
-                <div class="row">
-                    <div class="col l12">
-                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h4 class="head-content">@ViewData["Selected"] - Financial Portfolio</h4>
-        <div class="interest">
-            <div class="container">
-                <div class="row">
-                    <div class="col l12">
-                        <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
-                    </div>
-                </div>
-            </div>
-    </main>
+        </li>
+    </ul>
 
-    <script src="~/scripts/jquery-1.10.2.js"></script>
-    <script src=".././bundles/js/materialize.min.js"></script>
-    <script type="text/javascript">
+    <!-- side nav end-->
+    <br>
+    <br>
+    <!-- card -->
+    <div class="row">
+        <div class="col s10 m10 l7 offset-l4 offset-s1 offset-m1">
+            <h3 class="flow-text">
+                <font color="#0097a7" size="23">Financial Recomendation</font>
+            </h3>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <a href=@Url.Action("Index", "FinancialRecommendation")>Domestic</a>
+                            <a href=@Url.Action("AbroadIndex", "FinancialRecommendation")>Aboard</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h4 class="head-content">@ViewData["Selected"] - Short Fall Projection</h4>
+            <div class="events">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l12">
+                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="head-content">@ViewData["Selected"] - Financial Portfolio</h4>
+            <div class="interest">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l12">
+                            <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- chart -->
+
+            <script src="~/scripts/jquery-1.10.2.js"></script>
+            <script src=".././bundles/js/materialize.min.js"></script>
+            <script type="text/javascript">
         window.onload = function () {
             var data;
             var recomendationChartData;
@@ -234,7 +255,7 @@
             });
 
             var chart = new CanvasJS.Chart("chartContainer", {
-                backgroundColor: "rgba(28, 44, 88, 1)",
+                backgroundColor: "#fafafa",
                 animationEnabled: true,
                 axisX: {
                     interval: 1,
@@ -265,7 +286,7 @@
             });
             var chart1 = new CanvasJS.Chart("chartContainer2",
                {
-                   backgroundColor: "rgba(28, 44, 88, 1)",
+                   backgroundColor: "#fafafa",
                    animationEnabled: true,
                    legend: {
                        verticalAlign: "center",
@@ -290,12 +311,12 @@
             chart1.render();
         }
 
-    </script>
-    <script type="text/javascript" src="../../bundles/js/canvasjs.min.js"></script>
-    <script type="text/javascript">
+            </script>
+            <script type="text/javascript" src="../../bundles/js/canvasjs.min.js"></script>
+            <script type="text/javascript">
 
         $('.button-collapse').sideNav();
 
-    </script>
+            </script>
 </body>
 </html>
