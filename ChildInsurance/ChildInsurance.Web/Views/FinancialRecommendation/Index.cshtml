@@ -5,7 +5,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Finantial Recomendation</title>
+    <title>Domestic     Financial Recomendation</title>
     <link type="text/css" rel="stylesheet" href="./bundles/css/materialize.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -99,7 +99,7 @@
                 </a>
             </div>
         </li>
-        
+
         <li>
             <!-- Table goes in the document BODY -->
             <div class="row">
@@ -177,19 +177,45 @@
                 <div class="container">
                     <div class="row">
                         <div class="col l12">
-                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                            <div id="chartContainer" style="height: 300px; width: 80%;"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <h4 class="head-content">@ViewData["Selected"] - Financial Portfolio</h4>
+            <h4 class="head-content">Financial Portfolio</h4>
             <div class="interest">
                 <div class="container">
                     <div class="row">
                         <div class="col l12">
-                            <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+                            <div id="chartContainer2" style="height: 300px; width: 80%;"></div>
                         </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <h4 class="head-content">
+                                Recommended Plans
+                            </h4>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    1.
+                                </td>
+                                <td>
+                                    <a href=@Url.Action("index","illustration")>SBI Life - Smart Scholar</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2.
+                                </td>
+                                <td>
+                                    <a href=@Url.Action("index","illustration")> SBI Life - Smart Champ Insurance</a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -199,124 +225,126 @@
             <script src="~/scripts/jquery-1.10.2.js"></script>
             <script src=".././bundles/js/materialize.min.js"></script>
             <script type="text/javascript">
-        window.onload = function () {
-            var data;
-            var recomendationChartData;
-            $.ajax({
-                url: ".././FinancialRecommendation/FactFindData",
-                type: "GET",
-                data: data,
-                async: false,
-                beforeSend: function (xhr) {
-                    if (xhr && xhr.overrideMimeType) {
-                        xhr.overrideMimeType('application/json;charset=utf-8');
-                    }
-                },
-                dataType: "json",
-                success: function (data) {
-                    recomendationChartData = JSON.parse(data);
+                window.onload = function () {
+                    var data;
+                    var recomendationChartData;
+                    $.ajax({
+                        url: ".././FinancialRecommendation/FactFindData",
+                        type: "GET",
+                        data: data,
+                        async: false,
+                        beforeSend: function (xhr) {
+                            if (xhr && xhr.overrideMimeType) {
+                                xhr.overrideMimeType('application/json;charset=utf-8');
+                            }
+                        },
+                        dataType: "json",
+                        success: function (data) {
+                            recomendationChartData = JSON.parse(data);
+                        }
+
+                    });
+
+                    var recommendationData;
+                    var datalist;
+                    $.ajax({
+                        url: ".././FinancialRecommendation/GetFinancialRecomandation",
+                        type: "GET",
+                        data: data,
+                        async: false,
+                        beforeSend: function (xhr) {
+                            if (xhr && xhr.overrideMimeType) {
+                                xhr.overrideMimeType('application/json;charset=utf-8');
+                            }
+                        },
+                        dataType: "json",
+                        success: function (data) {
+                            recommendationData = data;
+                            datalist = [
+
+                         { y: 0, label: " " },
+                         { y: 0, label: " " },
+                       { y: recommendationData.ActualCost, label: "Actual" },
+                       { y: 0, label: " " },
+                         { y: 0, label: " " },
+                         { y: 0, label: " " },
+                         { y: 0, label: recommendationData.YearDifference + "years" },
+                         { y: 0, label: " " },
+                         { y: 0, label: " " },
+                         { y: 0, label: " " },
+                       { y: recommendationData.ProjectedCost, label: "Projected" },
+                         { y: 0, label: " " }
+
+                            ]
+                        }
+
+                    });
+
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        backgroundColor: "#fafafa",
+                        animationEnabled: true,
+                        axisX: {
+                            interval: 1,
+                            gridThickness: 0,
+                            labelFontSize: 15,
+                            labelFontStyle: "normal",
+                            labelFontWeight: "normal",
+                            labelFontFamily: "Lucida Sans Unicode"
+
+                        },
+                        axisY2: {
+                            interlacedColor: "rgba(1,77,101,.)",
+                            gridColor: "rgba(1,77,101,.1)"
+
+                        },
+
+                        data: [
+                        {
+                            type: "bar",
+                            name: "companies",
+                            axisYType: "secondary",
+                            color: "#014D78",
+                            toolTipContent: "Rs.{y}",
+                            dataPoints: datalist
+                        }
+
+                        ]
+                    });
+                    var chart1 = new CanvasJS.Chart("chartContainer2",
+                       {
+                           backgroundColor: "#fafafa",
+                           animationEnabled: true,
+                           legend: {
+                               verticalAlign: "center",
+                               horizontalAlign: "right"
+                           },
+                           data: [
+                           {
+                               indexLabelFontSize: 20,
+                               indexLabelFontFamily: "Monospace",
+                               indexLabelFontColor: "darkgrey",
+                               indexLabelLineColor: "darkgrey",
+                               indexLabelPlacement: "outside",
+                               type: "pie",
+                               showInLegend: true,
+                               toolTipContent: "Rs.{y} - <strong>#percent%</strong>",
+                               dataPoints: recomendationChartData
+                           }
+                           ]
+                       });
+
+                    chart.render();
+                    chart1.render();
                 }
-
-            });
-
-            var recommendationData;
-            var datalist;
-            $.ajax({
-                url: ".././FinancialRecommendation/GetFinancialRecomandation",
-                type: "GET",
-                data: data,
-                async: false,
-                beforeSend: function (xhr) {
-                    if (xhr && xhr.overrideMimeType) {
-                        xhr.overrideMimeType('application/json;charset=utf-8');
-                    }
-                },
-                dataType: "json",
-                success: function (data) {
-                    recommendationData = data;
-                    datalist = [
-
-                 { y: 0, label: " " },
-                 { y: 0, label: " " },
-               { y: recommendationData.ActualCost, label: "Actual" },
-               { y: 0, label: " " },
-                 { y: 0, label: " " },
-                 { y: 0, label: " " },
-                 { y: 0, label: recommendationData.YearDifference + "years" },
-                 { y: 0, label: " " },
-                 { y: 0, label: " " },
-                 { y: 0, label: " " },
-               { y: recommendationData.ProjectedCost, label: "Projected" },
-                 { y: 0, label: " " }
-
-                    ]
-                }
-
-            });
-
-            var chart = new CanvasJS.Chart("chartContainer", {
-                backgroundColor: "#fafafa",
-                animationEnabled: true,
-                axisX: {
-                    interval: 1,
-                    gridThickness: 0,
-                    labelFontSize: 15,
-                    labelFontStyle: "normal",
-                    labelFontWeight: "normal",
-                    labelFontFamily: "Lucida Sans Unicode"
-
-                },
-                axisY2: {
-                    interlacedColor: "rgba(1,77,101,.)",
-                    gridColor: "rgba(1,77,101,.1)"
-
-                },
-
-                data: [
-                {
-                    type: "bar",
-                    name: "companies",
-                    axisYType: "secondary",
-                    color: "#014D78",
-                    toolTipContent: "Rs.{y}",
-                    dataPoints: datalist
-                }
-
-                ]
-            });
-            var chart1 = new CanvasJS.Chart("chartContainer2",
-               {
-                   backgroundColor: "#fafafa",
-                   animationEnabled: true,
-                   legend: {
-                       verticalAlign: "center",
-                       horizontalAlign: "right"
-                   },
-                   data: [
-                   {
-                       indexLabelFontSize: 20,
-                       indexLabelFontFamily: "Monospace",
-                       indexLabelFontColor: "darkgrey",
-                       indexLabelLineColor: "darkgrey",
-                       indexLabelPlacement: "outside",
-                       type: "pie",
-                       showInLegend: true,
-                       toolTipContent: "Rs.{y} - <strong>#percent%</strong>",
-                       dataPoints: recomendationChartData
-                   }
-                   ]
-               });
-
-            chart.render();
-            chart1.render();
-        }
 
             </script>
             <script type="text/javascript" src="../../bundles/js/canvasjs.min.js"></script>
             <script type="text/javascript">
 
-        $('.button-collapse').sideNav();
+                $('.button-collapse').sideNav();
 
             </script>
+        </div>
+    </div>
 </body>
 </html>

@@ -2,12 +2,11 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Career Option</title>
-    <link type="text/css" rel="stylesheet" href="./bundles/css/materialize.min.css" />
+    <title>Abroad Financial Recomendation</title>
+    <link type="text/css" rel="stylesheet" href="../../bundles/css/materialize.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="./bundles/js/materialize.js"></script>
@@ -56,16 +55,15 @@
             }
     </style>
 </head>
-
 <body class="grey lighten-5">
     <!-- top nav -->
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper cyan darken-3 z-depth-1">
+                <a href="#" class="brand-logo">Logo</a>
                 <a href="#" data-activates="slide-out" class="button-collapse">
                     <i class="material-icons">menu</i>
                 </a>
-                <a href="#" class="brand-logo">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li>
                         <a href="#">
@@ -101,7 +99,7 @@
                 </a>
             </div>
         </li>
-        
+
         <li>
             <!-- Table goes in the document BODY -->
             <div class="row">
@@ -109,7 +107,7 @@
                     <tr>
                         <td class="card indigo lighten-2 white-text hoverable">
                             <div>
-                                <a href="@Url.Action("Index", "FinancialRecommendation")" style="display:inline-block;height:100%;">
+                                <a href="@Url.Action("Index", "FinancialRecommendation")" style="display:inline-block;height:100%; width: 100%">
                                     <p style="line-height:1;" class="white-text">
                                         <i class="material-icons">local_atm</i>
                                         <br />Financial Recommedation
@@ -146,17 +144,49 @@
                         <td class="card indigo white-text hoverable"><i class="material-icons">account_balance</i><br>Manage School Insurance</td>
                         <td class="card indigo lighten-2 white-text hoverable"><i class="material-icons">monetization_on</i><br>Crowd Funding</td>
                     </tr>
+                    <tr>
+                        <td class="card indigo lighten-1 white-text hoverable"><i class="material-icons">local_atm</i><br>Finantial Recomendation</td>
+                        <td class="card indigo white-text hoverable"><i class="material-icons">business_center</i><br>Career Recomendation</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            Recommended Plans
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1.
+                        </td>
+                        <td>
+                            <a href=@Url.Action("","")>SBI Life - Smart Scholar</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            2.
+                        </td>
+                        <td>
+                            <a href=@Url.Action("","")> SBI Life - Smart Champ Insurance</a>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </li>
     </ul>
 
     <!-- side nav end-->
+    <br>
+    <br>
     <!-- card -->
     <div class="row">
         <div class="col s10 m10 l7 offset-l4 offset-s1 offset-m1">
             <h3 class="flow-text">
-                <font color="#0097a7" size="23"> Finantial Recomendation</font>
+                <font color="#0097a7" size="23">Financial Recomendation</font>
             </h3>
             <div>
                 <table>
@@ -173,24 +203,52 @@
                 <div class="container">
                     <div class="row">
                         <div class="col l12">
-                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                            <div id="chartContainer" style="height: 300px; width: 80%;"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <h4 class="head-content">@ViewData["Selected"] - Financial Portfolio</h4>
+            <h4 class="head-content">Financial Portfolio</h4>
             <div class="interest">
                 <div class="container">
                     <div class="row">
                         <div class="col l12">
-                            <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+                            <div id="chartContainer2" style="height: 300px; width: 80%;"></div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div>
+                <div class="row">
+                    <h4 class="head-content">
+                        Recommended Plans
+                    </h4>
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            1.
+                        </td>
+                        <td>
+                            <a href=@Url.Action("index","illustration")>SBI Life - Smart Scholar</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            2.
+                        </td>
+                        <td>
+                            <a href=@Url.Action("index","illustration")> SBI Life - Smart Champ Insurance</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <!-- card -->
             <!-- chart -->
+
             <script src="~/scripts/jquery-1.10.2.js"></script>
             <script src=".././bundles/js/materialize.min.js"></script>
             <script type="text/javascript">
