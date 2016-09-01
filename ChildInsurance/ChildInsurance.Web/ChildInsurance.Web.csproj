@@ -123,6 +123,7 @@
     <Content Include="App_Data\Abroad.xml" />
     <Content Include="App_Data\AcademicInterest.xml" />
     <Content Include="App_Data\Domestic.xml" />
+    <Content Include="App_Data\Illustration.xml" />
     <Content Include="App_Data\NonAcademicInterest.xml" />
     <Content Include="bundles\css\ghpages-materialize.css" />
     <Content Include="bundles\css\materialize.css" />
@@ -204,6 +205,7 @@
     <Compile Include="Controllers\FactFindController.cs" />
     <Compile Include="Controllers\FinancialRecommendationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IllustrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -211,6 +213,7 @@
     <Compile Include="Models\FactFindViewModel.cs" />
     <Compile Include="Models\FinancialRecomandation.cs" />
     <Compile Include="Models\FinancialViewModel.cs" />
+    <Compile Include="Models\IllustrationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\CareerOptionService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -254,6 +257,7 @@
     </None>
     <Content Include="Views\FinancialRecommendation\AbroadIndex.cshtml" />
     <Content Include="Views\FinancialRecommendation\Index.cshtml" />
+    <Content Include="Views\Illustration\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
