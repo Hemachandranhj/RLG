@@ -5,6 +5,5 @@ E:\Application\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\obj\
 E:\Application\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\obj\Debug\ChildInsurance.Engine.FinancialRecommendation.pdb
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\bin\Debug\ChildInsurance.Engine.FinancialRecommendation.dll
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\bin\Debug\ChildInsurance.Engine.FinancialRecommendation.pdb
-C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\obj\Debug\ChildInsurance.Engine.FinancialRecommendation.csprojResolveAssemblyReference.cache
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\obj\Debug\ChildInsurance.Engine.FinancialRecommendation.dll
 C:\Users\gumohanasri\Source\Repos\RLG\ChildInsurance\ChildInsurance.Engine.FinancialRecommendation\obj\Debug\ChildInsurance.Engine.FinancialRecommendation.pdb
